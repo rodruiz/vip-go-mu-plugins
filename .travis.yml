@@ -30,3 +30,7 @@ notifications:
 after_success:
   # Push the aggregated code, including submodules, to the public repo
   - ./ci/deploy.sh
+  # Generate some documentation
+  - pear channel-discover pear.phpdoc.org
+  - pear install phpdoc/phpDocumentor
+  - 
