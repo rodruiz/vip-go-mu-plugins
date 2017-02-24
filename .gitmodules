@@ -7,6 +7,9 @@
 [submodule "advanced-post-cache"]
 	path = advanced-post-cache
 	url = git@github.com:Automattic/advanced-post-cache.git
+[submodule "jetpack-force-2fa"]
+	path = vip-jetpack/jetpack-force-2fa
+	url = git@github.com:Automattic/jetpack-force-2fa.git
 [submodule "jetpack"]
 	path = jetpack
 	url = git@github.com:Automattic/jetpack.git
