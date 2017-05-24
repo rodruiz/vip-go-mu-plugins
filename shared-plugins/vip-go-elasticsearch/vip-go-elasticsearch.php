@@ -275,6 +275,15 @@ class WPCOM_elasticsearch {
 			'blog_id'
 		);
 
+		// Have admin searches use the secured strategy, without overriding
+		// any already set strategy.
+		if (
+			( is_user_logged_in() && is_admin() ) &&
+			false === $es_query_args['security_strategy']
+		) {
+			$es_query_args['security_strategy'] = 'site_search_api_secured';
+		}
+
 		// This filter is harder to use if you're unfamiliar with ES but it allows complete control over the query
 		$es_query_args = apply_filters( 'wpcom_elasticsearch_query_args', $es_query_args, $query );
 
