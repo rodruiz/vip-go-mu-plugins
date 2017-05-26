@@ -282,6 +282,8 @@ class WPCOM_elasticsearch {
 			false === $es_query_args['security_strategy']
 		) {
 			$es_query_args['security_strategy'] = 'site_search_api_secured';
+		} else {
+			$es_query_args['security_strategy'] = 'site_search_api';
 		}
 
 		// This filter is harder to use if you're unfamiliar with ES but it allows complete control over the query
